@@ -11,4 +11,5 @@ void PrintNumber(int a  , int b )
 int main() 
 {
     PrintNumber(1,4);
+    // 1  2  3  4 
 }
