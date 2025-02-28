@@ -8,6 +8,8 @@ string ReadText()
            getline(cin,Text);
            return Text;
 }
+// global variable 
+const short EncryptionKey= 2 ;
 string EncryptText(string Text, short EncryptionKey)
 {
 for (int i = 0; i <= Text.length(); i++)
@@ -15,13 +17,12 @@ for (int i = 0; i <= Text.length(); i++)
 Text[i] = char((int) Text[i] + EncryptionKey);
 }
 return Text;
-
+}
+void Print(string s1)
+{
+    cout<< s1 << endl;
 }
 int main() 
 {
- const short EncryptionKey= 2 ;
- string userinput=ReadText();
- string encryptText=EncryptText(userinput,EncryptionKey);
-cout<<encryptText;
-  
+ Print(EncryptText(ReadText(),EncryptionKey));
 }
