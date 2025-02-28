@@ -27,6 +27,7 @@ void Print(int Number)
 int main() 
 {
 short Num = CheckNum(ReadNumber());
- Print(CheckNum(Num));
- cout<<"Absolute Value: "<< Num <<endl;
+// Two Ways To Print The result
+Print(CheckNum(Num));
+cout<<"Absolute Value: "<< Num <<endl;
 }
