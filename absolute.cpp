@@ -1,27 +1,32 @@
-//abs 
+// absolute value
 #include <iostream>
 #include <cmath>
 using namespace std;
-void  ReadNumber(int & Number )
+short ReadNumber()
 {
-  cout<<"enter Number?\n";
-  cin>>Number;
+     int Number;
+     cout<<"enter num: ";
+     cin>>Number;
+     return Number;
 }
-void CheckNumber(int &Number)
+short CheckNum(int Number)
 {
   if(Number<0)
   {
-    cout<<"My abs:"<<Number*-1<<endl;
+    return Number *-1;
   }
   else
   {
-    cout<<"My abs:"<<Number<<endl;
+    return Number;
   }
+}
+void Print(int Number)
+{
+    cout << "Absolute Value: " << Number <<endl;
 }
 int main() 
 {
-  int Number;
-  ReadNumber(Number);
-  CheckNumber(Number);
-  cout<<"C++ abs : "<<abs(Number);
+short Num = CheckNum(ReadNumber());
+ Print(CheckNum(Num));
+ cout<<"Absolute Value: "<< Num <<endl;
 }
